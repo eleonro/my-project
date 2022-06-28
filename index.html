@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
 <body>
 
 <h2>My first try</h2>
@@ -16,11 +19,11 @@
     from pyodide.http import pyfetch
     import asyncio
     
-    response = await pyfetch(url="https://api.funtranslations.com/translate/yoda.json?text=Master%20Obiwan%20has%20lost%20a%20planet.", method="GET")
+    response = await pyfetch(url="https://api.ipify.org?format=json", method="GET")
     test = await response.json()
-    message1 = """<p>text</p> """
+    message1 = """<p>IP ADRESS</p> """
     print(message1)
-    urltest=test['translated']
+    urltest=test['ip']
     print(urltest)
     </py-script>
 </body>
