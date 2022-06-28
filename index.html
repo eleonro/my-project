@@ -12,6 +12,16 @@
     <li>flower</li>
     <li>greece</li>
 </ol>
-
+    <py-script> 
+    from pyodide.http import pyfetch
+    import asyncio
+    
+    response = await pyfetch(url="https://catfact.ninja/fact", method="GET")
+    test = await response.json()
+    message1 = """<p>text</p> """
+    print(message1)
+    urltest=test['length']
+    print(urltest)
+    </py-script>
 </body>
 </html>
