@@ -16,7 +16,7 @@
         }
         li {
             font-family: Garamond;
-            font-size: 11px;
+            font-size: 12px;
             color: black;
         }
     </style>
@@ -44,7 +44,7 @@
     
     response = await pyfetch(url="https://api.ipify.org?format=json", method="GET")
     test = await response.json()
-    message1 = """<p>IP ADRESS</p> """
+    message1 = """<p>WAS MADE FROM THIS IP ADRESS</p> """
     print(message1)
     urltest=test['ip']
     print(urltest)
